@@ -1,4 +1,4 @@
-# Quarkus Getting Started Demo
+# Quarkus Serverless Started 
 
 这是一个使用 [Quarkus](https://quarkus.io/) 构建的最小化 CRUD 服务示例项目，展示了如何使用 Quarkus 框架构建高性能的 REST API 服务，并与 Hibernate ORM 进行集成。
 
