@@ -267,7 +267,7 @@ Quarkus的特性与Serverless架构的需求高度契合，结合后具有以下
 
 您可以通过以下地址体验部署在Serverless平台上的本项目服务：
 
-**体验地址**：[quarkus-demo.hongdux.com](https://quarkus-demo.hongdux.com/hello)
+**体验地址**：[quarkus-demo.hongdux.com](https://quarkus-demo.hongdux.com/hello/users)
 
 ### API接口测试示例
 
