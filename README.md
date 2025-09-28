@@ -83,7 +83,7 @@ quarkus.datasource.jdbc.url=jdbc:mysql://192.168.0.1:3306/yudao?useSSL=false&ser
 在开发模式下运行应用：
 
 ```bash
-./mvnw quarkus:dev
+mvn quarkus:dev
 ```
 
 应用将在 `http://localhost:8080` 上启动。
@@ -121,7 +121,7 @@ Quarkus 支持构建本地可执行文件，可以获得更快的启动速度和
 可以通过以下命令构建本地可执行文件：
 
 ```bash
-./mvnw install -Pnative
+mvn install -Pnative
 ```
 
 > ⚠️ **注意**：直接使用Maven构建需要本地安装配置GraalVM及相关依赖，如果本地环境缺少相关依赖或配置不正确，容易导致构建失败。特别是在不同操作系统上，可能需要安装特定的构建工具和库。
@@ -133,7 +133,7 @@ Quarkus 支持构建本地可执行文件，可以获得更快的启动速度和
 为了确保构建环境的一致性，推荐使用Quarkus官方提供的Docker镜像进行构建。可以使用以下命令指定构建镜像：
 
 ```bash
-./mvnw install -Pnative -Dquarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-native-image:22.3-java17
+mvn install -Pnative -Dquarkus.native.container-build=true -Dquarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-native-image:22.3-java17
 ```
 
 > ℹ️ **说明**：Docker镜像构建是指在本地通过Docker启动一个专门用于构建Quarkus Native应用的容器环境，在该容器内完成Java代码到本地可执行文件的编译过程。构建完成后，生成的可执行文件会输出到本地的`target`目录中，而不是在Docker容器中运行服务。这种方式避免了本地环境配置的复杂性，确保构建过程的一致性和可重复性。
@@ -267,7 +267,7 @@ Quarkus的特性与Serverless架构的需求高度契合，结合后具有以下
 
 您可以通过以下地址体验部署在Serverless平台上的本项目服务：
 
-**体验地址**：[quarkus-demo.hongdux.com](http://quarkus-demo.hongdux.com)
+**体验地址**：[quarkus-demo.hongdux.com](https://quarkus-demo.hongdux.com/hello)
 
 ### API接口测试示例
 
@@ -275,34 +275,34 @@ Quarkus的特性与Serverless架构的需求高度契合，结合后具有以下
 
 1. **获取问候语**
    ```bash
-   curl http://quarkus-demo.hongdux.com/hello
+   curl https://quarkus-demo.hongdux.com/hello
    ```
 
 2. **根据姓名获取个性化问候**
    ```bash
-   curl http://quarkus-demo.hongdux.com/hello/greeting/Quarkus
+   curl https://quarkus-demo.hongdux.com/hello/greeting/Quarkus
    ```
 
 3. **获取所有用户**
    ```bash
-   curl http://quarkus-demo.hongdux.com/hello/users
+   curl https://quarkus-demo.hongdux.com/hello/users
    ```
 
 4. **根据ID获取用户**
    ```bash
-   curl http://quarkus-demo.hongdux.com/hello/users/1
+   curl https://quarkus-demo.hongdux.com/hello/users/1
    ```
 
 5. **创建新用户**
    ```bash
-   curl -X POST http://quarkus-demo.hongdux.com/hello/users \
+   curl -X POST https://quarkus-demo.hongdux.com/hello/users \
         -H "Content-Type: application/json" \
         -d '{"username": "testuser", "email": "test@example.com", "fullName": "Test User", "age": 25}'
    ```
 
 6. **更新用户信息**
    ```bash
-   curl -X PUT http://quarkus-demo.hongdux.com/hello/users/1 \
+   curl -X PUT https://quarkus-demo.hongdux.com/hello/users/1 \
         -H "Content-Type: application/json" \
         -d '{"username": "updateduser", "email": "updated@example.com", "fullName": "Updated User", "age": 30}'
    ```
