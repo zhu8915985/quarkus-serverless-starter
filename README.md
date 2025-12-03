@@ -314,9 +314,6 @@ Quarkus的特性与Serverless架构的需求高度契合，结合后具有以下
 
 通过这些API接口，您可以充分体验Quarkus在Serverless环境中的卓越性能表现，感受毫秒级的响应速度和极低的资源消耗。
 
-## 许可证
-
-本项目使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 许可证。
 
 ## 专业服务支持
 

@@ -313,10 +313,6 @@ This project provides rich REST API interfaces, which you can test through the f
 
 Through these API interfaces, you can fully experience the excellent performance of Quarkus in Serverless environments, feeling millisecond-level response speed and extremely low resource consumption.
 
-## License
-
-This project uses [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) license.
-
 ## Professional Service Support
 
 If you want to upgrade your existing services to the Quarkus framework or migrate to Serverless architecture, we provide a one-stop solution:
